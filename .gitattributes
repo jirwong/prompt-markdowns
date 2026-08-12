@@ -1,0 +1,15 @@
+# Set default behavior to automatically handle line endings
+* text=auto
+
+# Explicitly ensure bash scripts and Unix tools always use LF
+*.sh text eol=lf
+*.bash text eol=lf
+Makefile text eol=lf
+
+# Force Windows-specific batch scripts to use CRLF
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Ensure binary files (images, PDFs) are never touched
+*.png binary
+*.jpg binary

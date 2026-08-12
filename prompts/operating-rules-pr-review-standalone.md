@@ -1,14 +1,10 @@
 # Operating rules
 
 # Objective
-In the current repository, examine the following files and refactor/reorganize them according to the plan produced in Phase 0:
-
-- [FILE(S) TO EXAMINE]
-
-Also prepare the code for use in an Electron app.
+[INSERT YOUR OBJECTIVE HERE]
 
 # Context
-The repository in the current folder: [REPOSITORY].
+The repository in the current folder.
 
 Please obey the following Operating Rules.
 

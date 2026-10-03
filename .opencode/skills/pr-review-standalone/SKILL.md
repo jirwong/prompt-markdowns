@@ -1,6 +1,6 @@
 ---
 name: pr-review-standalone
-description: Run a strict human-in-the-loop migration/refactoring workflow with per-PR sub-agent review on the current repository. Triggers on PR review, migration, refactoring, human-in-the-loop, sub-agent review, design doc, plan doc, PR-by-PR execution.
+description: Run a strict human-in-the-loop PR-by-PR development workflow with per-PR sub-agent review on the current repository. Triggers on PR review, migration, refactoring, human-in-the-loop, sub-agent review, design doc, plan doc, PR-by-PR execution.
 ---
 
 # Operating rules
@@ -14,7 +14,7 @@ Please obey the following Operating Rules.
 
 # Operating Rules: Strict Human-in-the-Loop with Sub-Agent PR Review
 
-You must follow a strict, sequential workflow. Do NOT attempt to complete the entire migration at once. You must halt and wait for my explicit approval at defined checkpoints.
+You must follow a strict, sequential workflow. Do NOT attempt to complete the entire implementation at once. You must halt and wait for my explicit approval at defined checkpoints.
 
 ## Phase 0: Brainstorming & Task Breakdown
 
@@ -27,7 +27,7 @@ Work through the following brainstorm steps before drafting any plan. Do not ski
 5. **Write the design doc.** Once I approve the design, write it to a markdown design document (for example `docs/superpowers/specs/YYYY-MM-DD-<topic>-design.md`, or a path I specify) and commit it. This is the durable record of the approved design that Phase 1 must not drift from.
 6. **Self-review the design doc.** Review it with fresh eyes: scan for placeholders or TBDs, check that sections don't contradict each other, confirm the scope is right for a single plan, and resolve any ambiguity by picking one interpretation and making it explicit. Fix any issues inline, then re-commit.
 7. **STOP AND WAIT.** Ask me to review the design doc before you draft the plan. Do not proceed to planning until I approve it.
-8. **Draft the plan.** Draft a sequential migration plan. Start with a **Global Constraints** section listing the project-wide rules every task must obey, copied verbatim from the design doc and the Objective/Context (version floors, naming rules, platform requirements, and any rule like "Electron-compatible, no Node-only APIs"). Break the plan down into small, atomic tasks. Each task must represent a single logical feature or structural change that can be reviewed independently in a single Pull Request. For each task, specify the exact files involved, the interfaces it produces and consumes, the tests it requires, and break the task into small bite-sized steps (write failing test → verify it fails → implement → verify it passes → commit), with a commit after each step so each review diff stays small and reviewable.
+8. **Draft the plan.** Draft a sequential implementation plan. Start with a **Global Constraints** section listing the project-wide rules every task must obey, copied verbatim from the design doc and the Objective/Context (version floors, naming rules, platform requirements, and any rule like "Electron-compatible, no Node-only APIs"). Break the plan down into small, atomic tasks. Each task must represent a single logical feature or structural change that can be reviewed independently in a single Pull Request. For each task, specify the exact files involved, the interfaces it produces and consumes, the tests it requires, and break the task into small bite-sized steps (write failing test → verify it fails → implement → verify it passes → commit), with a commit after each step so each review diff stays small and reviewable.
 9. **Self-review the plan.** Review it with fresh eyes: scan for placeholders or TBDs; confirm every task traces back to a decision in the design doc and to your stated Objective; and check that interfaces, function names, and types are consistent across tasks — a name used one way in an early task and differently in a later task is a bug. Fix any issues inline, then re-commit.
 10. **Write the plan doc.** Write the plan to a markdown plan document (for example `docs/superpowers/plans/YYYY-MM-DD-<feature-name>.md`, or a path I specify) and commit it. This is the durable contract that Phase 1 executes from.
 11. **STOP AND WAIT.** Do not write any implementation code. Ask me to review and approve the task list.

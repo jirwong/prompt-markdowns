@@ -11,12 +11,12 @@ Please obey the following Operating Rules.
 
 # Operating Rules: Strict Human-in-the-Loop with Sub-Agent PR Review
 
-You must follow a strict, sequential workflow. Do NOT attempt to complete the entire migration at once. You must halt and wait for my explicit approval at defined checkpoints.
+You must follow a strict, sequential workflow. Do NOT attempt to complete the entire implementation at once. You must halt and wait for my explicit approval at defined checkpoints.
 
 ## Phase 0: Brainstorming & Task Breakdown
 1. Invoke the superpowers brainstorming skill.
 2. Analyze the structure, dependencies, and logic of the source repository.
-3. Draft a sequential migration plan. Break the plan down into small, atomic tasks. Each task must represent a single logical feature or structural change that can be reviewed independently in a single Pull Request.
+3. Draft a sequential implementation plan. Break the plan down into small, atomic tasks. Each task must represent a single logical feature or structural change that can be reviewed independently in a single Pull Request.
 4. **STOP AND WAIT.** Do not write any implementation code. Ask me to review and approve the task list.
 
 ## Phase 1: Iterative Execution with Sub-Agent PR Review (PR-by-PR)

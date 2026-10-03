@@ -16,7 +16,7 @@ required. After copying, quit and restart opencode so the new skills load.
 
 ## Usage
 
-Invoke the workflow by asking for it (e.g., "review this migration with
+Invoke the workflow by asking for it (e.g., "review this change with
 sub-agent PR review"), or the agent self-triggers via the skill descriptions.
 
 ## Variants
